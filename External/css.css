@@ -1,0 +1,98 @@
+body{margin:0 auto; background-color:#00244f;}
+*{box-sizing:border-box;}
+a{text-decoration:none;}
+#wrapper{
+	width:calc(100% - 200px);
+	width:-webkit-calc(100% - 200px);
+	position:absolute;
+	top:0px;
+	right:0px;
+	margin:0 auto;}
+
+/*Fonts*/
+@font-face{
+    font-family:SFCreg;
+    src:url(fonts/SFChaerilidae.ttf);}
+@font-face{
+    font-family:SFCbold;
+    src:url(fonts/SFChaerilidae-Bold.ttf);}	
+@font-face{
+    font-family:SFCshadedi;
+    src:url(fonts/SFChaerilidaeShaded-Oblique.ttf);}
+
+/*Images*/
+#mainimg{width:100%; background-color:black;}
+.imgs{display:none; width:100%;}
+.fade{
+	-webkit-animation: fade 3s linear 1 forwards;
+	animation: fade 3s linear 1 forwards;}
+@-webkit-keyframes fade{
+	0%{opacity:0;}
+	20%{opacity:1;}
+	80%{opacity:1;}
+	100%{opacity:0;}}
+@keyframes fade{
+	0%{opacity:0;}
+	20%{opacity:1;}
+	80%{opacity:1;}
+	100%{opacity:0;}}
+
+/*Main*/
+main{
+	max-width:1000px;
+	margin:0px auto;
+	background-color:white;
+	display:block;}
+#content{padding:15px;}
+h1{
+	font-family:SFCshadedi, Arial, Helvetica, sans-serif;
+	font-size:40px;
+	color:#116ad2;}
+p{
+	font-family:SFCreg, Arial, Helvetica, sans-serif;
+	font-size:22px;
+	line-height:20px;
+	color:black;}
+
+/*Nav*/
+nav{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:200px;
+	height:100%;
+	padding-top:4px;
+	background:black;}
+.navdivs{
+	width:194px;
+	height:34px;
+	line-height:30px;
+	margin:0px 3px 4px 3px;
+	padding:5px;
+	border:2px #00244f solid;
+	background-color:grey;
+	background: linear-gradient(to top right, black, #116ad2);
+	background: -webkit-linear-gradient(left bottom, black, #116ad2);
+	background: -o-linear-gradient(bottom left, black, #116ad2);
+	background: -moz-linear-gradient(bottom left, black, #116ad2);}
+nav a{
+	width:100%;
+	height:34px;
+	display:block;
+	font-family:SFCbold, Arial, Helvetica, sans-serif;
+	color:white;
+	font-size:20px;
+	transition:all 0.3s ease-out;}
+nav a:hover{color:#e822ce; font-size:24px;}
+nav a:active{color:#40f81c;}
+nav a:visited{color:#a099ff;}
+
+/*Responsive*/
+@media screen and (max-width:500px) {
+	#wrapper{width:100%; min-width:320px; position:static;}
+	nav{position:static; width:100%; height:auto; padding:4px 0px;}
+	.navdivs{width:96%; margin:0px 2% 4px 2%;}
+	#mainimg{width:100%; float:none;}
+	h1{display:none;}
+	p{display:none;}
+}
